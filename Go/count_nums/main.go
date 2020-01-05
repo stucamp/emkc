@@ -9,7 +9,7 @@ func main() {
 	var value1 string = os.Args[1]
 	r := []rune(value1)
 
-	var mapIt = make (map[rune]int)
+	var mapIt = make(map[rune]int)
 	mapIt['0'] = 0
 	mapIt['1'] = 0
 	mapIt['2'] = 0
@@ -32,3 +32,5 @@ func main() {
 
 	fmt.Printf("%c\n", highest)
 }
+
+//TEST
