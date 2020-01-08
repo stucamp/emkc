@@ -2,23 +2,30 @@ import java.util.HashMap;
 
 public class Main {
 
-    private static HashMap<char,int> m = new HashMap<char, int>();
-
-
     public static void main(String[] args) {
 
-        m.put('I',1);
-        m.put('V',5);
-        m.put('X',10);
-        m.put('L',50);
-        m.put('C',100);
-        m.put('D',500);
-        m.put('M',1000);
-
         String value1 = args[0];
+        char[] asChars = value1.toCharArray();
+
+        Parser testies = new Parser();
+
+        System.out.println(testies.parseRomanNums(asChars));
     }
+}
+
+class Parser {
 
     public int parseRomanNums(char[] nums) {
+
+        HashMap<Character, Integer> m = new HashMap<Character, Integer>();
+
+        m.put('I', 1);
+        m.put('V', 5);
+        m.put('X', 10);
+        m.put('L', 50);
+        m.put('C', 100);
+        m.put('D', 500);
+        m.put('M', 1000);
 
         int tot = 0;
 
@@ -45,5 +52,4 @@ public class Main {
         }
         return tot;
     }
-
 }
